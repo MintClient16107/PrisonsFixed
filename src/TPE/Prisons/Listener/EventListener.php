@@ -30,7 +30,7 @@ final class EventListener implements Listener {
      * @return void
      */
     public function onBreak(BlockBreakEvent $event) : void {
-        if($event->getPlayer()->getWorld()->getFolderName() === Utils::getPlotWorld()->getFolderName() || $event->getPlayer()->hasPermission("prisons.nomine.bypass"))  {
+        if($event->getPlayer()->getWorld()->getFolderName() === (String)Utils::getPlotWorld() || $event->getPlayer()->hasPermission("prisons.nomine.bypass"))  {
             return;
         } else {
             $event->cancel();
@@ -47,7 +47,7 @@ final class EventListener implements Listener {
      * @return void
      */
     public function onPlace(BlockPlaceEvent $event) : void {
-        if($event->getPlayer()->getWorld()->getFolderName() === Utils::getPlotWorld()->getFolderName() || $event->getPlayer()->hasPermission("prisons.nomine.bypass")) {
+        if($event->getPlayer()->getWorld()->getFolderName() === (String)Utils::getPlotWorld() || $event->getPlayer()->hasPermission("prisons.nomine.bypass")) {
             return;
         } else {
             $event->cancel();
