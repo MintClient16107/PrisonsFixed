@@ -1,6 +1,6 @@
 name: Prisons
 version: 3.0.0
-api: 4.0.0
+api: 5.0.0
 author: TPE
 main: TPE\Prisons\Prisons
 depend:
